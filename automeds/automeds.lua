@@ -1,5 +1,5 @@
 _addon.name = 'Automeds'
-_addon.version = '1.1.25'
+_addon.version = '1.2.25'
 _addon.author = 'Multi'
 _addon.commands = {'automeds','ameds'}
 
@@ -11,9 +11,11 @@ config = require('config')
 chat = require('chat')
 res = require('resources')
 
+local automeds = true
+
 -- Defaults
 local defaults = {}
-defaults.buffs = S{"amnesia","curse","disease","doom","paralysis","plague","silence","slow"}
+defaults.buffs = S{"curse","disease","doom","paralysis","silence","slow"}
 defaults.alttrack = false
 defaults.sitrack = false
 
@@ -22,7 +24,7 @@ aura = {
 enabled = true,			-- Aura Awareness
 distance = 20,
 -- Sources List: add as {"target|debuff","target|debuff"}
-sources_list = {},
+sources_list = {"numbing blossom|paralysis","triboulex|paralysis"},
 smart = {
 enabled = false,		-- Smart Aura Block
 attempt_window = 8,   	-- Triggers Smart Aura Block after the failed `max_attempts` within the `attempt_window` in seconds
@@ -33,18 +35,15 @@ block_time = 120       	-- Seconds to pause item use when aura is assumed
 }
 
 local settings = config.load(defaults)
-local automeds = true
 
 -- Debuff Item Map
 local debuff_items = {
-["amnesia"] = "Remedy",
 ["curse"] = "Holy Water",
-["disease"] = "Antidote",
+["disease"] = "Remedy",
 ["doom"] = "Holy Water",
 ["paralysis"] = "Remedy",
-["plague"] = "Remedy",
 ["silence"] = "Echo Drops",
-["slow"] = nil, -- no item
+["slow"] = nil,
 }
 
 -- State
