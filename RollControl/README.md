@@ -10,8 +10,8 @@
 
 **Display Overlay:**
 	- Shows **Roll 1** and **Roll 2**
-	- Shows **Rolls** on/off
-	- Shows when rolls are suspended by **Sneak/Invisible**
+	- Shows rolls on/off
+	- Shows when rolls are suspended by Sneak/Invisible
 	- Indicates if **Engaged Mode** is enabled
 	
 **Double-Up:**
