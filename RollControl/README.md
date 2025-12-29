@@ -13,7 +13,7 @@
 	
 **Roll Tracker:**
 	• Displays correct values for **Crooked Cards** bonus (COR only), gear and job bonuses in roll effect (any job)
-	• Find out the roll+ potency from the COR in party and set it using //roller rollplus [0|3|5|6|7|8]
+	• You must find out the roll+ potency from the COR in party and configure it (values: 0|3|5|6|7|8)
 	
 **Hold TP:**
     • Prevents rolls from being used while your TP is at least 1000
@@ -35,7 +35,7 @@
 
 Do not type | or [ ] when using commands:
 
-List commands: //roller help
+List commands: //rc help
 
 - //rc on|off - Enable/Disable
 - //rc roll1 [name] - Set Roll #1
